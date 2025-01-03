@@ -1,0 +1,18 @@
+The solution involves understanding and adjusting the CSS selector order and specificity to ensure that the ID selector takes the correct precedence.
+
+Here's the corrected CSS (`bugSolution.css`):
+
+```css
+#myElement {
+  color: blue;
+}
+
+.myClass {
+  color: red; /* This will not override the ID selector anymore */
+}
+.myContainer .myClass {
+  color: green; /* This remains for more specific styling if needed */
+}
+```
+
+By ensuring that the ID selector maintains higher precedence and handling specific cases correctly we prevent unexpected visual outcome.
